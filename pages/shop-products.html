@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vyapari Ecommerce</title>
+    <title>Vyapari Ecommerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="./assets/css/app.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" />
+
+  </head>
+ 
+  <body>
+    <!-- Header  -->
+    <header class="bg-primary fixed-top  py-2 px-md-3">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between py-3 py-md-0">
+                <div class="d-flex align-items-center gap-2 ">
+                    <a id="openProfileSidebtn" class="cursor-pointer">
+                        <i class="ri-menu-line fs-3 text-white"></i> </a>
+                <a href="index.html" class="logo me-2 me-md-0 ">
+                    <img src="assets/img/logo.png" class="" alt="Logo">
+                </a>
+    
+               <!-- search  -->
+                <div class="search position-relative d-none d-md-flex">
+                    <i class="ri-search-line position-absolute icon1"></i>
+                    <input type="text" style="padding:0.6rem 4rem 0.6rem 1.8rem !important" placeholder="Search in Shops"
+                        class="bg-white rounded-2 form-control">
+                    <div class="icons2 d-flex align-items-center position-absolute">
+                        <i class="ri-store-2-line"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" stroke="#9ca3af" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M12 19V5" />
+                        </svg>
+                        <svg width="19" height="19" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" fill-rule="evenodd" stroke="#9ca3af" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="m3.5 7.5l7-4l5.992 3.424A2 2 0 0 1 17.5 8.661v4.678a2 2 0 0 1-1.008 1.737l-5 2.857a2 2 0 0 1-1.984 0l-5-2.857A2 2 0 0 1 3.5 13.339v-2.802" />
+                                <path d="M9.552 10.99a2 2 0 0 0 1.896 0L17 8m-6.5 3.5V18" />
+                                <path d="m3.5 7.5l7 4l-3 1l-7-4zm7-4l7 4l2-2l-7-4z" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+              
+    <div class="header-items d-flex align-items-center">
+    
+    <!-- location  -->
+    <button  type="button" data-bs-toggle="modal" data-bs-target="#locationModal" class="location px-2 px-md-3 w-max d-flex flex-wrap align-items-center gap-2 bg-transparent border-0">
+        <i class="ri-map-pin-fill text-white fs-5"></i>
+        <div class="d-flex text-start flex-column d-none d-lg-flex ">
+           <p class="text-white mb-0 fs-14 fw-light">Deliver to</p>
+           <h6 class="text-white mb-0 ">Nilamel, Kollam 691535</h6>
+        </div>
+    </button>
+    
+    <!-- user  -->
+    <a href="auth/signip.html" class=" d-flex align-items-center gap-2 w-max px-2 px-md-3 ">
+      <img src="assets/img/user.png" width="30px" alt="">
+            <h6 class="text-white mb-0 d-none d-sm-flex ">Profile</h6>
+    </a>
+    
+    <!-- cart  -->
+    <a href="cart.html" class="d-flex align-items-center gap-3 w-max flex-wrap px-2 px-md-3 ">
+        <div class="cartIcon">
+          <i class="ri-shopping-cart-2-line fs-3 text-white"></i>
+            <div class="no">5</div>
+        </div>
+        <div class="d-flex flex-column d-none d-lg-flex ">
+            <p class="text-white mb-0 fs-14 fw-light">Rs 572/-</p>
+            <h6 class="text-white mb-0 ">Cart</h6>
+         </div>
+     
+    </a>
+              </div>
+        
+            
+        </div>
+    
+        <!-- search  -->
+        <div class="search position-relative d-flex d-md-none">
+            <svg class="position-absolute icon1" width="15" height="15" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill="#9ca3af"
+                    d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z" />
+            </svg>
+            <input type="text" style="padding:0.6rem 4rem 0.6rem 1.8rem !important" placeholder="Search in Shops"
+                class="bg-white rounded-2 form-control">
+            <div class="icons2 d-flex align-items-center position-absolute">
+                <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" stroke="#2873F0" stroke-width="1.5">
+                        <path
+                            d="M3.5 11v3c0 3.771 0 5.657 1.172 6.828C5.843 22 7.729 22 11.5 22h1c3.771 0 5.657 0 6.828-1.172C20.5 19.657 20.5 17.771 20.5 14v-3" />
+                        <path d="M9.5 2h5l.652 6.517a3.167 3.167 0 1 1-6.304 0L9.5 2Z" />
+                        <path
+                            d="M3.33 5.351c.178-.89.267-1.335.448-1.696a3 3 0 0 1 1.888-1.548C6.056 2 6.51 2 7.418 2H9.5l-.725 7.245a3.06 3.06 0 1 1-6.043-.904l.598-2.99Zm17.34 0c-.178-.89-.267-1.335-.448-1.696a3 3 0 0 0-1.888-1.548C17.944 2 17.49 2 16.582 2H14.5l.725 7.245a3.06 3.06 0 1 0 6.043-.904l-.598-2.99Z" />
+                        <path stroke-linecap="round"
+                            d="M9.5 21.5v-3c0-.935 0-1.402.201-1.75a1.5 1.5 0 0 1 .549-.549C10.598 16 11.065 16 12 16s1.402 0 1.75.201a1.5 1.5 0 0 1 .549.549c.201.348.201.815.201 1.75v3" />
+                    </g>
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" stroke="#9ca3af" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" d="M12 19V5" />
+                </svg>
+                <svg width="19" height="19" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd" stroke="#9ca3af" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="m3.5 7.5l7-4l5.992 3.424A2 2 0 0 1 17.5 8.661v4.678a2 2 0 0 1-1.008 1.737l-5 2.857a2 2 0 0 1-1.984 0l-5-2.857A2 2 0 0 1 3.5 13.339v-2.802" />
+                        <path d="M9.552 10.99a2 2 0 0 0 1.896 0L17 8m-6.5 3.5V18" />
+                        <path d="m3.5 7.5l7 4l-3 1l-7-4zm7-4l7 4l2-2l-7-4z" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </header>
+    
+
+<main class="shop-details">
+    <nav class="px-4 py-md-2 py-3 shadow-sm bg-white position-sticky">
+        <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
+            <div class="profile d-none d-md-block">
+                <img src="./assets/img/img1.png" class="w-100" alt="">
+            </div>
+           <div class="d-flex flex-column gap-1 w-100">
+            <div class="d-md-flex align-items-center justify-content-between mb-2">
+                <div class="d-flex flex-column flex-md-row align-items-md-end gap-md-3">
+                    <h3 class="mb-0 text-dark ">Texas Kitchen</h3>
+                    <p class="mb-0 text-dark-emphasis mb-2 mb-md-0">Nilamel,Chadayamangalam,Kollam</p>
+                </div>
+                <div class="d-flex flex-column flex-md-row align-items-md-end gap-2">
+                    <span class="text-bg-success px-1 rounded-2 d-flex align-items-center gap-1 w-fit fs-14 h-fit">4.1
+                        <i class="ri-star-fill fs-12 text-white"></i>
+                    </span>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="bg-orange rounded-2 w-100">
+                            <p class="fs-14 px-2 mb-0 text-white text-center">Free delivery for minimum order of <br> <span class="fw-bold">₹1500</span> upto <span class="fw-bold">5km</span></p>
+                        </div>
+                        <button class="p-2 border-2 border-dark-subtle rounded-2 bg-transparent d-block d-md-none" type="button" data-bs-target="#mobileFilter" data-bs-toggle="modal">  <svg width="24" height="24" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#aeaea" d="M18 28h-4a2 2 0 0 1-2-2v-7.59L4.59 11A2 2 0 0 1 4 9.59V6a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v3.59a2 2 0 0 1-.59 1.41L20 18.41V26a2 2 0 0 1-2 2M6 6v3.59l8 8V26h4v-8.41l8-8V6Z"/>
+                        </svg></button>
+                    </div>
+                  
+                  
+                </div>
+            </div>
+          
+            <div class="largeview d-flex border-primary  rounded-pill" id="nav-tab" role="tablist">
+                <a href="shop-detail.html" class="  text-primary fw-medium nav-link w-100 rounded-pill py-2 text-center">Home</a>
+                <a href="shop-products.html" class="   nav-link w-100 rounded-pill py-2 text-center active">Products</a>
+                <a href="shop-reviews.html" class="  text-primary fw-medium nav-link w-100 rounded-pill py-2 text-center"> Reviews</a>
+            </div>
+           </div> 
+        </div>
+       
+    </nav>
+    <div class="container-fluid ">
+        
+        <div class="row">
+            <div class="col-md-2 p-0 bg-white d-none d-md-block">
+                <div class="filter-sidebar mb-3 gap-3 px-3 rounded-3 my-3" style="position: sticky; top: 93px;">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h6 class="text-dark mb-0">Filters</h6>
+                        <a href="#" class="text-primary fs-12 p-2">Clear all</a>
+                    </div>
+                    <div class="fliter-selections d-flex flex-wrap gap-2 mb-3">
+                    <span class="item fs-12">Samsung <i class="ri-close-line fs-5"></i></span>
+                    <span class="item fs-12">250 GB SSD <i class="ri-close-line fs-5"></i></span>
+                    <span class="item fs-12">DDR5 RAM <i class="ri-close-line fs-5"></i></span>
+                    </div>
+                    
+                    <div class="p-2 rounded-2 mb-3" style=" background-color:rgba(238, 238, 238, 1);">
+                       <h6>Price</h6>
+                       <div>
+                       <input type="range" class="w-100 mb-2"  min="1" max="100" value="50">
+                        
+                       </div>
+                       <div class="d-flex align-items-center gap-2">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Min</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select> 
+                          <p class="fs-14 mb-0">to</p>  
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>50,000</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>                      
+                       </div>
+                    </div> 
+
+                    <div class="p-2 rounded-2 mb-3" style=" background-color:rgba(238, 238, 238, 1);">
+                        <div class="dropdownBtn d-flex align-items-center justify-content-between mb-1">
+                            <h6 class="text-captitalize fs-6 mb-0">CUSTOMER RATING</h6>
+                            <i class="ri-arrow-down-s-fill fs-5"></i>
+                        </div>
+                        <div class="dropdownItem flex-column" style="display:none">
+                            <span class="item fs-12">Samsung</span>
+                            <span class="item fs-12">Samsung</span>
+                        </div>
+                    </div>                
+
+                    <div class="p-2 rounded-2 mb-3" style=" background-color:rgba(238, 238, 238, 1);">
+                        <div class="dropdownBtn d-flex align-items-center justify-content-between mb-1">
+                            <h6 class="text-captitalize fs-6 mb-0">BRAND</h6>
+                            <i class="ri-arrow-down-s-fill fs-5"></i>
+                        </div>
+                        <div class="dropdownItem flex-column" style="display:none">
+                            <div class="d-flex align-items-center gap-1">
+                                <i class="ri-close-fill"></i>
+                                <p class="mb-0 fs-12 text-dark-emphasis">Clear all</p>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                                <label class="form-check-label fs-14" for="defaultCheck1">
+                                  Samsung
+                                </label>
+                              </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label fs-14" for="defaultCheck1">
+                                  Huawei
+                                </label>
+                              </div>
+
+                        </div>
+                    </div>                
+                   </div>
+            </div>
+            <div class="col-md-10 my-3">
+                <div class="container-fluid px-3 py-3  ">
+                    <div class="d-grid favourite-product-container">
+                        <div>
+                            <div class="item-card favourite position-relative shadow-sm bg-white rounded-4 p-3">
+                                <a href="product-view.html" class="product mb-3 d-flex">
+                                    <img src="./assets/img/product.png" class="mx-auto" alt="">
+                                </a>
+                               <div class="liked-items position-absolute border">
+                                <i class="ri-heart-3-fill fs-6 text-danger"></i>
+                               </div>
+                               <div class="d-flex flex-column justify-content-center gap-1">
+                                <h6 class="text-dark-emphasis mb-0">Zinger Burger and Diet Cake Combo</h6>
+                                <span class="text-bg-success px-1 rounded-2 d-flex align-items-center gap-1 w-fit fs-14">4.1
+                                    <i class="ri-star-fill fs-12 text-white"></i>
+                                </span>
+                                <p class="fw- fs-6 text-black-50 mb-0"><span class="text-dark fw-bold fs-5 me-2">199/-</span><span class="custom-line-through">150</span> </p>
+                                <span class="text-primary fs-14">(30%OFF)</span>
+                                <button class="bg-transparent text-primary border-2 rounded-1 border-primary fs-14 fw-medium w-100" data-bs-target="#variantProduct" data-bs-toggle="modal">Add to cart</button>
+                                <button class="btn-primary fs-14 fw-medium text-white border-primary rounded-1 border-2 w-100">Buy Now</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="item-card favourite position-relative shadow-sm bg-white rounded-4 p-3">
+                                <div class="product mb-3 d-flex">
+                                    <img src="./assets/img/product.png" class="mx-auto" alt="">
+                                </div>
+                               <div class="liked-items position-absolute border">
+                                <i class="ri-heart-3-fill fs-6 text-danger"></i>
+                               </div>
+                               <div class="d-flex flex-column justify-content-center gap-1">
+                                <h6 class="text-dark-emphasis mb-0">Zinger Burger and Diet Cake Combo</h6>
+                                <span class="text-bg-success px-1 rounded-2 d-flex align-items-center gap-1 w-fit fs-14">4.1
+                                    <i class="ri-star-fill fs-12 text-white"></i>
+                                </span>
+                                <p class="fw- fs-6 text-black-50 mb-0"><span class="text-dark fw-bold fs-5 me-2">199/-</span><span class="custom-line-through">150</span> </p>
+                                <span class="text-primary fs-14">(30%OFF)</span>
+                                <button class="bg-transparent text-primary border-2 rounded-1 border-primary fs-14 fw-medium w-100">Add to cart</button>
+                                <button class="btn-primary fs-14 fw-medium text-white border-primary rounded-1 border-2 w-100">Buy Now</button>
+                              </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="item-card favourite position-relative shadow-sm bg-white rounded-4 p-3">
+                                <div class="product mb-3 d-flex">
+                                    <img src="./assets/img/product.png" class="mx-auto" alt="">
+                                </div>
+                               <div class="liked-items position-absolute border">
+                                <i class="ri-heart-3-fill fs-6 text-danger"></i>
+                               </div>
+                               <div class="d-flex flex-column justify-content-center gap-1">
+                                <h6 class="text-dark-emphasis mb-0">Zinger Burger and Diet Cake Combo</h6>
+                                <span class="text-bg-success px-1 rounded-2 d-flex align-items-center gap-1 w-fit fs-14">4.1
+                                    <i class="ri-star-fill fs-12 text-white"></i>
+                                </span>
+                                <p class="fw- fs-6 text-black-50 mb-0"><span class="text-dark fw-bold fs-5 me-2">199/-</span><span class="custom-line-through">150</span> </p>
+                                <span class="text-primary fs-14">(30%OFF)</span>
+                                <button class="bg-transparent text-primary border-2 rounded-1 border-primary fs-14 fw-medium w-100">Add to cart</button>
+                                <button class="btn-primary fs-14 fw-medium text-white border-primary rounded-1 border-2 w-100">Buy Now</button>
+                              </div>
+                            </div>
+                          </div>
+                        <div class="">
+                            <div class="item-card favourite position-relative shadow-sm bg-white rounded-4 p-3">
+                                <div class="product mb-3 d-flex">
+                                    <img src="./assets/img/product.png" class="mx-auto" alt="">
+                                </div>
+                               <div class="liked-items position-absolute border">
+                                <i class="ri-heart-3-fill fs-6 text-danger"></i>
+                               </div>
+                               <div class="d-flex flex-column justify-content-center gap-1">
+                                <h6 class="text-dark-emphasis mb-0">Zinger Burger and Diet Cake Combo</h6>
+                                <span class="text-bg-success px-1 rounded-2 d-flex align-items-center gap-1 w-fit fs-14">4.1
+                                    <i class="ri-star-fill fs-12 text-white"></i>
+                                </span>
+                                <p class="fw- fs-6 text-black-50 mb-0"><span class="text-dark fw-bold fs-5 me-2">199/-</span><span class="custom-line-through">150</span> </p>
+                                <span class="text-primary fs-14">(30%OFF)</span>
+                                <button class="bg-transparent text-primary border-2 rounded-1 border-primary fs-14 fw-medium w-100">Add to cart</button>
+                                <button class="btn-primary fs-14 fw-medium text-white border-primary rounded-1 border-2 w-100">Buy Now</button>
+                              </div>
+                            </div>
+                          </div>
+                        <div class="">
+                            <div class="item-card favourite position-relative shadow-sm bg-white rounded-4 p-3">
+                                <div class="product mb-3 d-flex">
+                                    <img src="./assets/img/product.png" class="mx-auto" alt="">
+                                </div>
+                               <div class="liked-items position-absolute border">
+                                <i class="ri-heart-3-fill fs-6 text-danger"></i>
+                               </div>
+                               <div class="d-flex flex-column justify-content-center gap-1">
+                                <h6 class="text-dark-emphasis mb-0">Zinger Burger and Diet Cake Combo</h6>
+                                <span class="text-bg-success px-1 rounded-2 d-flex align-items-center gap-1 w-fit fs-14">4.1
+                                    <i class="ri-star-fill fs-12 text-white"></i>
+                                </span>
+                                <p class="fw- fs-6 text-black-50 mb-0"><span class="text-dark fw-bold fs-5 me-2">199/-</span><span class="custom-line-through">150</span> </p>
+                                <span class="text-primary fs-14">(30%OFF)</span>
+                                <button class="bg-transparent text-primary border-2 rounded-1 border-primary fs-14 fw-medium w-100">Add to cart</button>
+                                <button class="btn-primary fs-14 fw-medium text-white border-primary rounded-1 border-2 w-100">Buy Now</button>
+                              </div>
+                            </div>
+                          </div>
+                       
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</main>
+
+<!-- product variants  -->
+<div class="modal fade"  id="variantProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog" >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <button type="button" class="btn-close z-3 position-absolute right-0 left-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body p-4 " style="background-color: #f9f9f9; ">
+            <div class="text-center mb-3">
+                <h5 class=" text-primary">Product Variant</h5>
+                <p class="mb-0 fs-12">Please select the variants products you need and Checkout...</p>
+            </div>
+            <div class="overflow-auto custom-scrollbar mb-3" style="max-height: 50vh;">
+                <div class="card p-3 shadow-sm border-0 mb-3 me-2 ">
+                    <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+                        <img src="./assets/img/product.png" class="object-cover" style="width: 80px; height: 80px;" alt="">
+                        <div class="d-flex flex-column justify-content-center gap-1">
+                            <h6 class="text-dark-emphasis mb-0">Zinger Burger and Diet Cake Combo</h6>
+                            <span class="text-bg-success px-1 rounded-2 d-flex align-items-center gap-1 w-fit fs-14">4.1
+                                <i class="ri-star-fill fs-12 text-white"></i>
+                            </span>
+                            <p class="fw- fs-6 text-black-50 mb-0"><span class="text-dark fw-bold fs-5 me-2">199/-</span><span class="custom-line-through">150</span> <span class="text-primary fs-14">(30%OFF)</span> </p>
+                           <div class="d-flex align-items-center gap-3">
+                            <button class="bg-transparent text-primary border-2 rounded-1 border-primary fs-14 fw-medium px-3 py-1">Add to cart</button>
+                            <button class="btn-primary fs-14 fw-medium text-white border-primary rounded-1 border-2 px-3 py-1">Buy Now</button>
+            
+                           </div>
+                          </div>
+                    </div>
+                  
+                 </div>
+                 <div class="card p-3 shadow-sm border-0 mb-3 me-2 ">
+                    <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+                        <img src="./assets/img/product.png" class="object-cover" style="width: 80px; height: 80px;" alt="">
+                        <div class="d-flex flex-column justify-content-center gap-1">
+                            <h6 class="text-dark-emphasis mb-0">Zinger Burger and Diet Cake Combo</h6>
+                            <span class="text-bg-success px-1 rounded-2 d-flex align-items-center gap-1 w-fit fs-14">4.1
+                                <i class="ri-star-fill fs-12 text-white"></i>
+                            </span>
+                            <p class="fw- fs-6 text-black-50 mb-0"><span class="text-dark fw-bold fs-5 me-2">199/-</span><span class="custom-line-through">150</span> <span class="text-primary fs-14">(30%OFF)</span> </p>
+                           <div class="d-flex align-items-center gap-3">
+                            <button class="bg-transparent text-primary border-2 rounded-1 border-primary fs-14 fw-medium px-3 py-1">Add to cart</button>
+                            <button class="btn-primary fs-14 fw-medium text-white border-primary rounded-1 border-2 px-3 py-1">Buy Now</button>
+            
+                           </div>
+                          </div>
+                    </div>
+                  
+                 </div>
+                 <div class="card p-3 shadow-sm border-0 mb-3 me-2 ">
+                    <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+                        <img src="./assets/img/product.png" class="object-cover" style="width: 80px; height: 80px;" alt="">
+                        <div class="d-flex flex-column justify-content-center gap-1">
+                            <h6 class="text-dark-emphasis mb-0">Zinger Burger and Diet Cake Combo</h6>
+                            <span class="text-bg-success px-1 rounded-2 d-flex align-items-center gap-1 w-fit fs-14">4.1
+                                <i class="ri-star-fill fs-12 text-white"></i>
+                            </span>
+                            <p class="fw- fs-6 text-black-50 mb-0"><span class="text-dark fw-bold fs-5 me-2">199/-</span><span class="custom-line-through">150</span> <span class="text-primary fs-14">(30%OFF)</span> </p>
+                           <div class="d-flex align-items-center gap-3">
+                            <button class="bg-transparent text-primary border-2 rounded-1 border-primary fs-14 fw-medium px-3 py-1">Add to cart</button>
+                            <button class="btn-primary fs-14 fw-medium text-white border-primary rounded-1 border-2 px-3 py-1">Buy Now</button>
+            
+                           </div>
+                          </div>
+                    </div>
+                  
+                 </div>
+            </div>
+            <button class="btn-primary fs-14 fw-medium text-white border-primary rounded-1 border-2 px-3 py-1 d-flex ms-auto">Submit</button>
+
+        
+        </div>
+    
+      </div>
+    </div>
+  </div>
+
+  <!-- mobilefilter productview  -->
+  <div class="modal fade" id="mobileFilter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <button type="button" class="btn-close z-3 position-absolute right-0 left-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body p-4">
+            <div class="filter-sidebar mb-3 gap-3 px-3 rounded-3 my-3">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <h6 class="text-dark mb-0">Filters</h6>
+                    <a href="#" class="text-primary fs-12 p-2">Clear all</a>
+                </div>
+                <div class="fliter-selections d-flex flex-wrap gap-2 mb-3">
+                <span class="item fs-12">Samsung <i class="ri-close-line fs-5"></i></span>
+                <span class="item fs-12">250 GB SSD <i class="ri-close-line fs-5"></i></span>
+                <span class="item fs-12">DDR5 RAM <i class="ri-close-line fs-5"></i></span>
+                </div>
+                
+                <div class="p-2 rounded-2 mb-3" style=" background-color:rgba(238, 238, 238, 1);">
+                   <h6>Price</h6>
+                   <div>
+                   <input type="range" class="w-100 mb-2"  min="1" max="100" value="50">
+                    
+                   </div>
+                   <div class="d-flex align-items-center gap-2">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Min</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select> 
+                      <p class="fs-14 mb-0">to</p>  
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>50,000</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>                      
+                   </div>
+                </div> 
+
+                <div class="p-2 rounded-2 mb-3" style=" background-color:rgba(238, 238, 238, 1);">
+                    <div class="dropdownBtn d-flex align-items-center justify-content-between mb-1">
+                        <h6 class="text-captitalize fs-6 mb-0">CUSTOMER RATING</h6>
+                        <i class="ri-arrow-down-s-fill fs-5"></i>
+                    </div>
+                    <div class="dropdownItem flex-column" style="display:none">
+                        <span class="item fs-12">Samsung</span>
+                        <span class="item fs-12">Samsung</span>
+                    </div>
+                </div>                
+
+                <div class="p-2 rounded-2 mb-3" style=" background-color:rgba(238, 238, 238, 1);">
+                    <div class="dropdownBtn d-flex align-items-center justify-content-between mb-1">
+                        <h6 class="text-captitalize fs-6 mb-0">BRAND</h6>
+                        <i class="ri-arrow-down-s-fill fs-5"></i>
+                    </div>
+                    <div class="dropdownItem flex-column" style="display:none">
+                        <div class="d-flex align-items-center gap-1">
+                            <i class="ri-close-fill"></i>
+                            <p class="mb-0 fs-12 text-dark-emphasis">Clear all</p>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                            <label class="form-check-label fs-14" for="defaultCheck1">
+                              Samsung
+                            </label>
+                          </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label fs-14" for="defaultCheck1">
+                              Huawei
+                            </label>
+                          </div>
+
+                    </div>
+                </div>                
+               </div>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+<script src="./assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+          // dropdown filter
+          var dropdownBtn = document.querySelectorAll('.dropdownBtn');
+          var dropdownItem = document.querySelectorAll('.dropdownItem');
+
+         dropdownBtn.forEach((btn, index) => {
+         btn.addEventListener('click', () => {
+         dropdownItem[index].classList.toggle('d-flex');
+        });
+    });
+    </script>
+ 
+    </body>
+    </html>
+    

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vyapari Ecommerce</title>
+    <title>Vyapari Ecommerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="./assets/css/app.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" />
+
+  </head>
+ 
+  <body>
+   <!-- Header  -->
+   <header class="bg-primary fixed-top  py-2 px-md-3">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between py-3 py-md-0">
+            <div class="d-flex align-items-center gap-2 ">
+                <a id="openProfileSidebtn" class="cursor-pointer">
+                    <i class="ri-menu-line fs-3 text-white"></i> </a>
+            <a href="index.html" class="logo me-2 me-md-0 ">
+                <img src="assets/img/logo.png" class="" alt="Logo">
+            </a>
+
+           <!-- search  -->
+            <div class="search position-relative d-none d-md-flex">
+                <i class="ri-search-line position-absolute icon1"></i>
+                <input type="text" style="padding:0.6rem 4rem 0.6rem 1.8rem !important" placeholder="Search in Shops"
+                    class="bg-white rounded-2 form-control">
+                <div class="icons2 d-flex align-items-center position-absolute">
+                    <i class="ri-store-2-line"></i>
+                    <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" stroke="#9ca3af" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M12 19V5" />
+                    </svg>
+                    <svg width="19" height="19" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd" stroke="#9ca3af" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path
+                                d="m3.5 7.5l7-4l5.992 3.424A2 2 0 0 1 17.5 8.661v4.678a2 2 0 0 1-1.008 1.737l-5 2.857a2 2 0 0 1-1.984 0l-5-2.857A2 2 0 0 1 3.5 13.339v-2.802" />
+                            <path d="M9.552 10.99a2 2 0 0 0 1.896 0L17 8m-6.5 3.5V18" />
+                            <path d="m3.5 7.5l7 4l-3 1l-7-4zm7-4l7 4l2-2l-7-4z" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+          
+<div class="header-items d-flex align-items-center">
+
+<!-- location  -->
+<button  type="button" data-bs-toggle="modal" data-bs-target="#locationModal" class="location px-2 px-md-3 w-max d-flex flex-wrap align-items-center gap-2 bg-transparent border-0">
+    <i class="ri-map-pin-fill text-white fs-5"></i>
+    <div class="d-flex text-start flex-column d-none d-lg-flex ">
+       <p class="text-white mb-0 fs-14 fw-light">Deliver to</p>
+       <h6 class="text-white mb-0 ">Nilamel, Kollam 691535</h6>
+    </div>
+</button>
+
+<!-- user  -->
+<a href="auth/signip.html" class=" d-flex align-items-center gap-2 w-max px-2 px-md-3 ">
+  <img src="assets/img/user.png" width="30px" alt="">
+        <h6 class="text-white mb-0 d-none d-sm-flex ">Profile</h6>
+</a>
+
+<!-- cart  -->
+<a href="cart.html" class="d-flex align-items-center gap-3 w-max flex-wrap px-2 px-md-3 ">
+    <div class="cartIcon">
+      <i class="ri-shopping-cart-2-line fs-3 text-white"></i>
+        <div class="no">5</div>
+    </div>
+    <div class="d-flex flex-column d-none d-lg-flex ">
+        <p class="text-white mb-0 fs-14 fw-light">Rs 572/-</p>
+        <h6 class="text-white mb-0 ">Cart</h6>
+     </div>
+ 
+</a>
+          </div>
+    
+        
+    </div>
+
+    <!-- search  -->
+    <div class="search position-relative d-flex d-md-none">
+        <svg class="position-absolute icon1" width="15" height="15" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill="#9ca3af"
+                d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z" />
+        </svg>
+        <input type="text" style="padding:0.6rem 4rem 0.6rem 1.8rem !important" placeholder="Search in Shops"
+            class="bg-white rounded-2 form-control">
+        <div class="icons2 d-flex align-items-center position-absolute">
+            <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" stroke="#2873F0" stroke-width="1.5">
+                    <path
+                        d="M3.5 11v3c0 3.771 0 5.657 1.172 6.828C5.843 22 7.729 22 11.5 22h1c3.771 0 5.657 0 6.828-1.172C20.5 19.657 20.5 17.771 20.5 14v-3" />
+                    <path d="M9.5 2h5l.652 6.517a3.167 3.167 0 1 1-6.304 0L9.5 2Z" />
+                    <path
+                        d="M3.33 5.351c.178-.89.267-1.335.448-1.696a3 3 0 0 1 1.888-1.548C6.056 2 6.51 2 7.418 2H9.5l-.725 7.245a3.06 3.06 0 1 1-6.043-.904l.598-2.99Zm17.34 0c-.178-.89-.267-1.335-.448-1.696a3 3 0 0 0-1.888-1.548C17.944 2 17.49 2 16.582 2H14.5l.725 7.245a3.06 3.06 0 1 0 6.043-.904l-.598-2.99Z" />
+                    <path stroke-linecap="round"
+                        d="M9.5 21.5v-3c0-.935 0-1.402.201-1.75a1.5 1.5 0 0 1 .549-.549C10.598 16 11.065 16 12 16s1.402 0 1.75.201a1.5 1.5 0 0 1 .549.549c.201.348.201.815.201 1.75v3" />
+                </g>
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill="none" stroke="#9ca3af" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" d="M12 19V5" />
+            </svg>
+            <svg width="19" height="19" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd" stroke="#9ca3af" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                        d="m3.5 7.5l7-4l5.992 3.424A2 2 0 0 1 17.5 8.661v4.678a2 2 0 0 1-1.008 1.737l-5 2.857a2 2 0 0 1-1.984 0l-5-2.857A2 2 0 0 1 3.5 13.339v-2.802" />
+                    <path d="M9.552 10.99a2 2 0 0 0 1.896 0L17 8m-6.5 3.5V18" />
+                    <path d="m3.5 7.5l7 4l-3 1l-7-4zm7-4l7 4l2-2l-7-4z" />
+                </g>
+            </svg>
+        </div>
+    </div>
+</header>
+
+
+<main class="shop-details">
+    <nav class="px-4 py-md-2 py-3 shadow-sm bg-white position-sticky">
+        <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
+            <div class="profile d-none d-md-block">
+                <img src="./assets/img/img1.png" class="w-100" alt="">
+            </div>
+           <div class="d-flex flex-column gap-1 w-100">
+            <div class="d-md-flex align-items-center justify-content-between mb-2">
+                <div class="d-flex flex-column flex-md-row align-items-md-end gap-md-3">
+                    <h3 class="mb-0 text-dark ">Texas Kitchen</h3>
+                    <p class="mb-0 text-dark-emphasis mb-2 mb-md-0">Nilamel,Chadayamangalam,Kollam</p>
+                </div>
+                <div class="d-flex flex-column flex-md-row align-items-md-end gap-2">
+                    <span class="text-bg-success px-1 rounded-2 d-flex align-items-center gap-1 w-fit fs-14 h-fit">4.1
+                        <i class="ri-star-fill fs-12 text-white"></i>
+                    </span>
+                    <div class="bg-orange rounded-2 ">
+                        <p class="fs-14 px-2 mb-0 text-white text-center">Free delivery for minimum order of <br> <span class="fw-bold">₹1500</span> upto <span class="fw-bold">5km</span></p>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="largeview d-flex border-primary  rounded-pill" id="nav-tab" role="tablist">
+                <a href="shop-detail.html" class="  text-primary fw-medium nav-link w-100 rounded-pill py-2 text-center">Home</a>
+                <a href="shop-products.html" class="  text-primary fw-medium nav-link w-100 rounded-pill py-2 text-center">Products</a>
+                <a href="shop-products.html" class="   nav-link w-100 rounded-pill py-2 text-center active">Reviews</a>
+            </div>
+           </div> 
+        </div>
+       
+    </nav>
+
+    <div class="bg-white">
+        <div class="container-fluid ">
+        
+            <div class="row ">
+                <div class="col-md-4 ">
+                    <div class="profile-sidebar  mb-3 gap-3 px-4 rounded-3 py-3" style="position: sticky; top: 93px; background-color: rgba(249, 249, 249, 1);">
+                    <div class="d-flex flex-column gap-3 mb-4">
+                        <h5 class="mb-4 mt-3 text-dark">Overall Rating</h5>
+                        <div class="shop-product-rating">
+                            <div class="row">
+                                <div class="col-4 p-0">
+                                    <div class="d-flex flex-column text-center justify-content-between">
+                                        <h3>4.3</h3>
+                                        <p class="mb-0 fs-14">(135 Rating and 13 Reviews)</p>
+                                      </div>
+                                </div>
+                                      <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="d-flex justify-content-end gap-1">
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                  </div>
+                                                <div class="d-flex justify-content-end gap-1">
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                  </div>
+                                                <div class="d-flex justify-content-end gap-1">
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                  </div>
+                                                <div class="d-flex justify-content-end gap-1">
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                  </div>
+                                                <div class="d-flex justify-content-end gap-1">
+                                                    <i class="ri-star-fill text-warning"></i>
+                                                  </div>
+                                            </div>
+                                            <div class="col-6 p-0">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="bar bar1 ">
+                                                    </div>
+                                                    <p class="mb-0 fs-12 fw-medium">35</p>
+                                              </div>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="bar bar2 ">
+                                                    </div>
+                                                    <p class="mb-0 fs-12 fw-medium">35</p>
+                                              </div>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="bar bar3 ">
+                                                    </div>
+                                                    <p class="mb-0 fs-12 fw-medium">35</p>
+                                              </div>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="bar bar4 ">
+                                                    </div>
+                                                    <p class="mb-0 fs-12 fw-medium">35</p>
+                                              </div>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="bar bar5">
+                                                    </div>
+                                                    <p class="mb-0 fs-12 fw-medium">35</p>
+                                              </div>
+                                               
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+    
+                                        </div>
+                                      </div>
+                            </div>
+                            <h5 class="mb-1 mt-4 text-dark">Add Your Ratings</h5>
+                             <div class="d-flex align-items-center gap-2 mb-3">
+                                <i class="ri-star-line fs-1 text-dark-emphasis opacity-75"></i>
+                                <i class="ri-star-line fs-1 text-dark-emphasis opacity-75"></i>
+                                <i class="ri-star-line fs-1 text-dark-emphasis opacity-75"></i>
+                                <i class="ri-star-line fs-1 text-dark-emphasis opacity-75"></i>
+                                <i class="ri-star-line fs-1 text-dark-emphasis opacity-75"></i>
+                             </div>
+                             <div class="mb-3">
+                                <textarea name="" class="form-control mb-3" id="" cols="30" rows="10" placeholder="Add a Comment"></textarea>
+                                <button class="bg-primary text-white rounded-1 border-primary fs-14 fw-medium px-5 py-1 w-fit d-flex ms-auto">Submit</button>
+                             </div>
+                                <div class="image-input">
+                                    <input type="file" accept="image/*" id="imageInput">
+                                    <label for="imageInput" class="image-button flex-column my-auto justify-content-center"><i class="ri-image-line fs-2"></i>Add a Photo</label>
+                                    <img src="" class="image-preview mx-auto">
+                                    <span class="change-image">Choose different image</span>
+                                </div>
+                        </div>
+                  
+                    </div>
+                       </div>
+                </div>
+                <div class="col-md-8 p-0">
+                    <div class="my-orders" style="background-color: rgba(249, 249, 249, 1);">
+                        <div class="container-fluid px-3 py-3  " >
+                            <h5 class="mb-4 mt-3 text-dark">Customer Comments and Reviews</h5>
+                           <div class="card border-0 p-3 mb-3" >
+                            <div class="d-flex flex-column flex-md-row  gap-3 mb-3">
+                                
+                                <div class="d-flex flex-column justify-content-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="./assets/img/user.png" class="object-fit-cover" style="width: 55px; height: 55px;" alt="">
+                                            <div>
+                                                <h6 class="text-dark mb-0">Muhammed Muflih</h6>
+                                                <p class="text-dark-emphasis fw-normal fs-14 mb-0">(5 min ago)</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-bg-success px-1 rounded-2 d-flex align-items-center gap-1 w-fit fs-14">4.1
+                                            <i class="ri-star-fill fs-12 text-white"></i>
+                                        </span>
+                                    </div>
+                                    <p class="fs-14 mb-2 fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dicta quasi dolore distinctio ad ipsum est aspernatur dolores expedita esse sunt magnam fugit, accusamus quis vero labore nisi possimus a.</p>
+                                    <p class="fs-14 mb-2 fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dicta quasi dolore distinctio ad ipsum est aspernatur dolores expedita esse sunt magnam fugit, accusamus quis vero labore nisi possimus a.</p>
+                                  
+                                    <div class="d-flex flex-column flex-md-row align-md-items-end justify-content-between">
+                                        <div class="review-images d-flex flex-row gap-2">
+                                            <img src="./assets/img/img2.png" alt="">
+                                            <img src="./assets/img/img2.png" alt="">
+                                            <img src="./assets/img/img2.png" alt="">
+                                         </div>
+                                        <div class="d-flex gap-2">
+                                           <a href="#" class="text-dark opacity-50"><i class="ri-thumb-up-line fs-5"></i></a>
+                                           <a href="#" class="text-dark opacity-50"><i class="ri-thumb-down-line fs-5"></i></a>
+                                           <a href="#" class="text-dark opacity-50">
+                                            <svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill="currentColor" d="M10.001 7.8a2.2 2.2 0 1 0 0 4.402A2.2 2.2 0 0 0 10 7.8zm0-2.6A2.2 2.2 0 1 0 9.999.8a2.2 2.2 0 0 0 .002 4.4m0 9.6a2.2 2.2 0 1 0 0 4.402a2.2 2.2 0 0 0 0-4.402"/>
+                                            </svg>
+                                           </a>
+                                        </div>
+                                    </div>
+                                  
+                                  </div>                               
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                  
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+<script src="./assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script>
+  $('#imageInput').on('change', function() {
+	$input = $(this);
+	if($input.val().length > 0) {
+		fileReader = new FileReader();
+		fileReader.onload = function (data) {
+		$('.image-preview').attr('src', data.target.result);
+		}
+		fileReader.readAsDataURL($input.prop('files')[0]);
+		$('.image-button').css('display', 'none');
+		$('.image-preview').css('display', 'block');
+		$('.change-image').css('display', 'block');
+	}
+});
+						
+$('.change-image').on('click', function() {
+	$control = $(this);			
+	$('#imageInput').val('');	
+	$preview = $('.image-preview');
+	$preview.attr('src', '');
+	$preview.css('display', 'none');
+	$control.css('display', 'none');
+	$('.image-button').css('display', 'flex');
+});
+</script>
+ 
+    </body>
+    </html>
